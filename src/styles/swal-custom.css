@@ -1,0 +1,46 @@
+/**
+ * CUSTOM SWEETALERT2 STYLING
+ */
+
+ .shipdeo-swal-title {
+  padding-top: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  color: #003A52;
+}
+
+.shipdeo-swal-title p {
+  margin-bottom: 10px;
+}
+
+.shipdeo-swal-icon-error {
+    margin       : auto;
+    width        : 80px;
+    height       : 80px;
+    border-radius: 50%;
+    border       : 6px solid #f16755;
+    position     : relative;
+}
+
+.shipdeo-swal-icon-error::after,
+.shipdeo-swal-icon-error::before {
+    position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    display         : block;
+    content         : ' ';
+    width           : 50px;
+    height          : 6px;
+    background-color: #f16755;
+    border-radius   : 12px;
+    transform       : translate(-50%, -50%);
+}
+
+.shipdeo-swal-icon-error::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.shipdeo-swal-icon-error::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

@@ -1,0 +1,21 @@
+.filterCard {
+  transition: opacity ease-out .2s;
+}
+
+.show {
+  height: auto;
+  opacity: 1;
+}
+
+.hide {
+  height: 0;
+  opacity: 0;
+}
+
+.datePickerWrapper {
+  padding: 14px;
+}
+
+.filterCard [class=Polaris-FormLayout__Item]:last-child {
+  flex-grow: 0;
+}

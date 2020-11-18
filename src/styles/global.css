@@ -1,0 +1,933 @@
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin : 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  min-height: 100%;
+}
+
+a {
+  color          : inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --shipdeo-color-1: #F1FCFF;
+  --shipdeo-color-2: #003A52;
+  --shipdeo-color-3: #212B36;
+  --global-scale   : 0.75;
+}
+
+/**
+ * CUSTOM STYLESHEET FOR SHOPIFY POLARIS
+ */
+
+.shipdeo {
+  width: 100%;
+}
+
+.shipdeo .error-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.shipdeo .error-404 img {
+  width: fit-content;
+}
+
+.shipdeo .error-404 span {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 29px;
+  color: #B8B8B8;
+  margin-top: 42px;
+}
+
+.shipdeo .error-404 p {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #656565;
+  max-width: 600px;
+  margin-top: 64px;
+}
+
+.shipdeo .divider {
+  border    : none;
+  border-top: 1px solid #C4CBD1;
+  margin    : 32px 0;
+}
+
+.shipdeo .text-white {
+  color: #fff;
+}
+
+.shipdeo .text-white svg {
+  fill: #fff;
+}
+
+.shipdeo .Polaris-Frame__Content {
+  display       : flex;
+  flex-direction: column;
+}
+
+.shipdeo .use-switch .Polaris-Choice {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.shipdeo .use-switch .Polaris-Choice .Polaris-Choice__Control {
+  height: fit-content;
+}
+
+.shipdeo .use-switch .Polaris-Choice .Polaris-Choice__Control {
+  width       : fit-content;
+  order       : 1;
+  margin-right: 0;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox {
+  width : 48px;
+  height: 28px;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Backdrop {
+  display      : block;
+  width        : 48px;
+  height       : 28px;
+  border-radius: 20px;
+  position     : unset;
+  top          : unset;
+  left         : unset;
+  right        : unset;
+  bottom       : unset;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Icon {
+  background-color: #fff;
+  top             : 2px;
+  left            : 4%;
+  border-radius   : 20px;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Icon .Polaris-Icon {
+  width : 24px;
+  height: 24px;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Icon .Polaris-Icon>* {
+  display: none;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Icon {
+  transition: left 100ms cubic-bezier(0.36, 0, 1, 1);
+  transform : scale(0.9);
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Input:focus+.Polaris-Checkbox__Backdrop {
+  box-shadow: none;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Input:not(:checked)~.Polaris-Checkbox__Backdrop {
+  background-color: #F0F2F3;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Input:checked~.Polaris-Checkbox__Backdrop {
+  background-color: #BFD6F6;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Input:not(:checked)~.Polaris-Checkbox__Icon {
+  background-color: #C4CBD1;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Input:checked~.Polaris-Checkbox__Icon {
+  background-color: #3B7DD8;
+  box-shadow      : 0px 2px 3px rgba(0, 0, 0, 0.17);
+  left            : calc(96% - 24px);
+  transform       : scale(0.9);
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Input:active~.Polaris-Checkbox__Backdrop {
+  box-shadow: 0 0 0 1px #b3caeb, 0 0 0 0 transparent;
+}
+
+.shipdeo .use-switch .Polaris-Checkbox__Backdrop::after {
+  display: none;
+}
+
+/**
+ * CUSTOM SWEETALERT2 STYLING
+ */
+
+.shipdeo-swal-title {
+  padding-top: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  color: #003A52;
+}
+
+.shipdeo-swal-title p {
+  margin-bottom: 10px;
+}
+
+.shipdeo-swal-icon-error {
+    margin       : auto;
+    width        : 80px;
+    height       : 80px;
+    border-radius: 50%;
+    border       : 6px solid #f16755;
+    position     : relative;
+}
+
+.shipdeo-swal-icon-error::after,
+.shipdeo-swal-icon-error::before {
+    position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    display         : block;
+    content         : ' ';
+    width           : 50px;
+    height          : 6px;
+    background-color: #f16755;
+    border-radius   : 12px;
+    transform       : translate(-50%, -50%);
+}
+
+.shipdeo-swal-icon-error::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.shipdeo-swal-icon-error::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/** 
+ * CONFIG
+ */
+
+.shipdeo .config .Polaris-Choice {
+  padding: 1rem 0;
+}
+
+.shipdeo .config .Polaris-Card {
+  max-width: 600px;
+  margin   : auto;
+}
+
+.shipdeo .config .btn-wrapper {
+  display        : flex;
+  justify-content: center;
+}
+
+.shipdeo .config .btn-wrapper.features {
+  margin-top: -2rem;
+}
+
+/**
+ * SHIPPING
+ */
+
+.shipdeo .shipping [class*=card-body] {
+  padding: 16px;
+}
+
+.shipdeo .shipping .wrapper {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.shipdeo .shipping .ship-info {
+  width: 67%;
+}
+
+.shipdeo .shipping .ship-method {
+  width: 30%;
+}
+
+.shipdeo .shipping .ship-method .card-body {
+  display       : flex;
+  flex-direction: column;
+}
+
+.shipdeo .shipping .ship-method .courier-list {
+  flex-grow: 1;
+}
+
+.shipdeo .shipping .ship-method-courier {
+  max-width  : 80px;
+  max-height : 32px;
+  user-select: none;
+}
+
+.shipdeo .shipping .fields-group-wrapper {
+  display   : flex;
+  margin-top: -1.6rem;
+}
+
+.shipdeo .shipping .Polaris-TextField {
+  margin-bottom: 10px;
+}
+
+.shipdeo .shipping .Polaris-TextField.Polaris-TextField--multiline,
+.shipdeo .shipping .Polaris-TextField.Polaris-TextField--multiline textarea {
+  min-height: 106px;
+}
+
+.shipdeo .shipping .fields-group {
+  flex-grow: 1;
+}
+
+.shipdeo .shipping .fields-group:first-child {
+  margin-right: 8px;
+}
+
+.shipdeo .shipping .fields-group:last-child {
+  margin-left: 8px;
+}
+
+.shipdeo .shipping .btn-wrapper {
+  display        : flex;
+  justify-content: center;
+}
+
+.shipdeo .shipping .Polaris-Choice {
+  display        : flex;
+  justify-content: space-between;
+  margin-bottom  : 5px;
+}
+
+.shipdeo .shipping .Polaris-Choice__Label {
+  width: 100px;
+}
+
+/**
+ * PAYMENT
+ */
+
+.shipdeo .payment .pm-card {
+  max-width   : calc(950px * var(--global-scale));
+  margin-left : auto;
+  margin-right: auto;
+}
+
+.shipdeo .payment .pm-card-body {
+  padding: 16px;
+}
+
+.shipdeo .payment .pm-card-heading {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  margin-bottom  : 32px;
+}
+
+.shipdeo .payment .pm-editor-disabled * {
+  pointer-events: none;
+}
+
+.shipdeo .payment .ql-container {
+  background-color: #fff;
+}
+
+.shipdeo .payment .pm-editor-disabled .ql-container {
+  background-color: #F9FAFB;
+}
+
+.shipdeo .payment .use-switch {
+  display    : flex;
+  align-items: center
+}
+
+.shipdeo .payment .use-switch> :not(:last-child) {
+  margin-right: 8px;
+}
+
+.shipdeo .payment .use-switch .Polaris-Choice {
+  justify-content: flex-start;
+}
+
+.shipdeo .payment .Polaris-TextField {
+  max-width: 480px;
+}
+
+.shipdeo .payment .Polaris-TextField__Input {
+  min-height: 72px;
+}
+
+.shipdeo .payment .quill .ql-editor {
+  min-height: 84px;
+}
+
+.shipdeo .payment .btn-wrapper {
+  display        : flex;
+  justify-content: flex-end;
+}
+
+.shipdeo .payment .btn-wrapper.disable-save .Polaris-Button {
+  filter: saturate(0);
+}
+
+
+/**
+ * ORDER
+ */
+
+.shipdeo .order {
+  margin     : 0 -115px;
+  padding-top: 10px;
+}
+
+.shipdeo .order .toolbar {
+  display: flex;
+}
+
+.shipdeo .order .toolbar-left {
+  display: flex;
+  width  : 50%;
+}
+
+.shipdeo .order .toolbar-left>* {
+  margin-right: 20px;
+}
+
+.shipdeo .order .toolbar-left> :nth-child(2) {
+  flex-grow: 1;
+}
+
+.shipdeo .order .toolbar-left> :last-child {
+  margin-right: 0px;
+}
+
+.shipdeo .order .toolbar-left .Polaris-Button {
+  background: #003A52;
+  border    : none;
+}
+
+.shipdeo .order .print-btn {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.shipdeo .order .toolbar-right {
+  display        : flex;
+  justify-content: flex-end;
+  align-items    : center;
+  width          : 100%;
+}
+
+.shipdeo .order .toolbar-right * {
+  font-size: 16px;
+}
+
+.shipdeo .order .rows-control {
+  display: flex;
+}
+
+.shipdeo .order .rows-control>span {
+  margin-right: 6px;
+}
+
+.shipdeo .order .rows-control>div>a>span {
+  margin-right: 6px;
+}
+
+.shipdeo .order .Polaris-Button {
+  width : 36px;
+  height: 36px;
+}
+
+.shipdeo .order .Polaris-Icon {
+  margin: unset;
+}
+
+.shipdeo .order .Polaris-DataTable__Table td,
+.shipdeo .order .Polaris-DataTable__Table th {
+  font-size     : 12px;
+  vertical-align: middle;
+}
+
+.shipdeo .order .Polaris-DataTable__Table thead>tr {
+  background-color: #F7F8FA;
+}
+
+.shipdeo .order .Polaris-DataTable__Table thead>tr>th {
+  border-bottom: none;
+}
+
+.shipdeo .order .Polaris-DataTable__Table td {
+  padding: 1rem 1.3rem;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.shipdeo .order .Polaris-DataTable__Table td:not(:first-child),
+.shipdeo .order .Polaris-DataTable__Table th:not(:first-child) {
+  text-align: center;
+}
+
+.shipdeo .order .Polaris-DataTable__Table td a {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: #147EE3;
+}
+
+.shipdeo .order .filter-card .Polaris-Connected__Item--primary .Polaris-TextField__Backdrop {
+  border-right: none;
+}
+
+.shipdeo .order .filter-card .Polaris-Button {
+  background      : none;
+  background-color: #FFFFFF;
+  border          : 0.1rem solid #c4cdd5;
+  box-shadow      : none;
+}
+
+.shipdeo .order .filter-card .Polaris-Button:hover,
+.shipdeo .order .filter-card .Polaris-Button:focus {
+  background      : none;
+  background-color: #FFFFFF;
+  border          : 1px solid #eee;
+}
+
+.shipdeo .order .filter-card .Polaris-Button:active {
+  background      : none;
+  background-color: #FFFFFF;
+}
+
+.shipdeo .order .filter-apply {
+  width: 100%;
+}
+
+.shipdeo .order .filter-apply .Polaris-Button {
+  box-shadow   : 0px 1px 0px rgba(22, 29, 37, 0.1), inset 0px 1px 0px 1px rgba(255, 255, 255, 0.06);
+  background   : linear-gradient(180deg, #03587B 0%, #025374 100%);
+  border       : 1px solid #003A52;
+  border-radius: 3px;
+  width        : 100%;
+  color        : #fff;
+}
+
+.shipdeo .order .filter-apply .Polaris-Button:hover,
+.shipdeo .order .filter-apply .Polaris-Button:focus {
+  background: linear-gradient(180deg, hsl(198, 95%, 30%) 0%, hsl(197, 97%, 28%) 100%);
+  border    : 1px solid #003A52;
+}
+
+.shipdeo .order .filter-apply .Polaris-Button:active {
+  box-shadow: 0px 1px 0px rgba(22, 29, 37, 0.1), inset 0px -1px 0px 1px rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, hsl(198, 95%, 22%) 0%, hsl(197, 97%, 20%) 100%);
+  border    : 1px solid #003A52;
+}
+
+.shipdeo .order .pagination {
+  margin: 25px auto;
+  width : fit-content;
+}
+
+/**
+ *  ORDER DETAIL
+ */
+
+.shipdeo .order-detail {
+  padding-top: 20px;
+  margin     : 0 -80px;
+}
+
+.shipdeo .order-detail .breadcrumb {
+  display: flex;
+  width  : fit-content;
+}
+
+.shipdeo .order-detail .breadcrumb span {
+  font-size  : 18px;
+  line-height: 100%;
+  color      : #A6B0B9;
+  margin-left: 5px;
+}
+
+.shipdeo .order-detail .container {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.shipdeo .order-detail .wrapper {
+  flex-basis: 66%;
+}
+
+.shipdeo .order-detail .options {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.shipdeo .order-detail .options .Polaris-Button {
+  border       : none;
+  box-shadow   : 0px 4px 10px rgba(105, 105, 105, 0.15);
+  background   : #FFFFFF;
+  border-radius: 8px;
+  padding      : 0 8px;
+}
+
+.shipdeo .order-detail .options .Polaris-Button__Text {
+  display    : flex;
+  align-items: center;
+}
+
+.shipdeo .order-detail .options .Polaris-Button__Text img {
+  width       : calc(25px * var(--global-scale));
+  height      : calc(25px * var(--global-scale));
+  margin-right: 8px;
+}
+
+.shipdeo .order-detail .options .Polaris-Button__Text span {
+  font-weight: 500;
+  font-size  : calc(16px - var(--global-scale));
+  line-height: 29px;
+  text-align : center;
+  color      : #003A52;
+}
+
+.shipdeo .order-detail .detail-card {
+  margin: 24px 0;
+}
+
+.shipdeo .order-detail .heading {
+  font-weight  : 300;
+  font-size    : 30px;
+  line-height  : 29px;
+  color        : #003A52;
+  margin-bottom: calc(32px * var(--global-scale));
+}
+
+.shipdeo .order-detail .subheading {
+  font-weight: 500;
+  font-size  : calc(20px * var(--global-scale));
+  line-height: 23px;
+  color      : #003A52;
+}
+
+.shipdeo .order-detail .heading strong {
+  font-weight: 500;
+}
+
+.shipdeo .order-detail .detail-wrapper {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.shipdeo .order-detail .detail-additional {
+  margin     : auto;
+  padding-top: 20px;
+}
+
+.shipdeo .order-detail .detail-wrapper th,
+.shipdeo .order-detail .detail-wrapper td,
+.shipdeo .order-detail .detail-additional th,
+.shipdeo .order-detail .detail-additional td {
+  font-weight: normal;
+  font-size  : 18px;
+  line-height: 29px;
+  text-align : left;
+}
+
+.shipdeo .order-detail .detail-wrapper th,
+.shipdeo .order-detail .detail-wrapper td {
+  padding-bottom: calc(24px * var(--global-scale));
+}
+
+.shipdeo .order-detail .detail-additional th,
+.shipdeo .order-detail .detail-additional td {
+  text-align: center;
+}
+
+.shipdeo .order-detail .detail-wrapper th,
+.shipdeo .order-detail .detail-additional th {
+  color: #A6B0B9;
+}
+
+.shipdeo .order-detail .detail-wrapper td,
+.shipdeo .order-detail .detail-additional td {
+  color: #003A52;
+}
+
+.shipdeo .order-detail .detail-wrapper td {
+  padding-left: 16px;
+}
+
+.shipdeo .order-detail .detail-additional td {
+  padding-left : 18px;
+  padding-right: 18px;
+}
+
+.shipdeo .order-detail .detail-additional .order-status {
+  vertical-align: middle;
+}
+
+.shipdeo .order-detail .detail-additional .order-status div {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.shipdeo .order-detail .order-information {
+  flex-basis: 30%;
+  height    : fit-content;
+}
+
+.shipdeo .order-detail .order-information [class*=cardBody] {
+  padding: calc(30px * var(--global-scale));
+}
+
+.shipdeo .order-detail .order-items-table {
+  width: 100%;
+}
+
+.shipdeo .order-detail .order-items-table th {
+  font-weight: normal;
+  font-size  : calc(20px * var(--global-scale));
+  line-height: 29px;
+  text-align : center;
+  color      : #A6B0B9;
+  width      : 20%;
+}
+
+.shipdeo .order-detail .order-items-table td {
+  font-weight: normal;
+  font-size  : calc(20px * var(--global-scale));
+  line-height: 29px;
+  text-align : center;
+}
+
+.shipdeo .order-detail .order-items-table th,
+.shipdeo .order-detail .order-items-table td {
+  padding-bottom: 24px;
+}
+
+.shipdeo .order-detail .order-items-table tr:last-child td {
+  padding-bottom: 0;
+}
+
+.shipdeo .order-detail .order-summary-table {
+  width      : 50%;
+  margin-left: auto;
+}
+
+.shipdeo .order-detail .order-summary-table th {
+  font-weight: 300;
+  font-size  : calc(20px * var(--global-scale));
+  line-height: 29px;
+  text-align : left;
+  color      : #003A52;
+}
+
+.shipdeo .order-detail .order-summary-table td {
+  font-weight: 300;
+  font-size  : calc(20px * var(--global-scale));
+  line-height: 29px;
+  text-align : right;
+  color      : #003A52;
+}
+
+.shipdeo .order-detail .order-summary-table tr:last-child td {
+  font-weight: 500;
+}
+
+/**
+ *  ORDER EDIT
+ */
+
+.shipdeo .order-edit {
+  padding-top: 20px;
+}
+
+.shipdeo .order-edit .breadcrumb {
+  display: flex;
+  width  : fit-content;
+}
+
+.shipdeo .order-edit .breadcrumb span {
+  font-size  : 18px;
+  line-height: 100%;
+  color      : #A6B0B9;
+  margin-left: 5px;
+}
+
+.shipdeo .order-edit .heading {
+  font-weight  : 300;
+  font-size    : 30px;
+  line-height  : 29px;
+  color        : #003A52;
+  margin-bottom: calc(32px * var(--global-scale));
+}
+
+.shipdeo .order-edit .form-wrapper .Polaris-FormLayout {
+  margin-bottom: 28px;
+}
+
+.shipdeo .order-edit .form-wrapper .Polaris-TextField__Backdrop,
+.shipdeo .order-edit .form-wrapper .Polaris-Select__Backdrop {
+  border       : none;
+  border-radius: 6px;
+  background   : #FFFFFF;
+  box-shadow   : 0px 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.shipdeo .order-edit .form-wrapper .Polaris-TextField--disabled>.Polaris-TextField__Backdrop {
+  background-color: #f4f5f6;
+}
+
+.shipdeo .order-edit .form-wrapper .Polaris-TextField__Input:focus+.Polaris-TextField__Backdrop::after {
+  opacity: 0;
+}
+
+.shipdeo .order-edit .form-wrapper .Polaris-Select__Input:focus~.Polaris-Select__Backdrop {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.shipdeo .order-edit .form-wrapper .button-wrapper {
+  display        : flex;
+  justify-content: center;
+  padding-top    : 28px;
+}
+
+.shipdeo .order-edit .button-wrapper .Polaris-Button {
+  box-shadow   : none;
+  background   : #003952;
+  border       : none;
+  border-radius: 12px;
+  min-width    : 108px;
+  color        : #fff;
+}
+
+.shipdeo .order-edit .button-wrapper .Polaris-Button:hover,
+.shipdeo .order-edit .button-wrapper .Polaris-Button:focus {
+  background: #004766;
+}
+
+.shipdeo .order-edit .button-wrapper .Polaris-Button:active {
+  background: #003247;
+}
+
+.shipdeo .order-edit .courier-list>* {
+  background-color: #FFFFFF;
+  box-shadow      : 0px 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.shipdeo .order-edit .courier-list>*:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.shipdeo .order-edit .courier-feature-wrapper {
+  padding: 10px;
+}
+
+.shipdeo .order-edit .courier-label {
+  display        : flex;
+  justify-content: space-between;
+  padding        : 5px;
+}
+
+.shipdeo .order-edit .courier-label label {
+  font-weight: 500;
+  font-size  : 16px;
+  line-height: 25px;
+  color      : #414B54;
+}
+
+.shipdeo .order-edit .courier-label a {
+  padding: 0 5px;
+  cursor : pointer;
+}
+
+.shipdeo .order-edit .courier-features {
+  display       : flex;
+  flex-direction: column;
+}
+
+.shipdeo .order-edit .courier-features>* {
+  display    : flex;
+  align-items: center;
+  padding    : 8px;
+}
+
+.shipdeo .order-edit .courier-features .Polaris-Choice__Control {
+  width     : 2.2rem;
+  height    : 2.2rem;
+  margin-top: 0;
+}
+
+.shipdeo .order-edit .courier-features .Polaris-RadioButton__Backdrop {
+  border-width: 0.2rem;
+  border-color: #7AC2FF !important;
+}
+
+.shipdeo .order-edit .courier-features .Polaris-RadioButton__Input:focus+.Polaris-RadioButton__Backdrop,
+.shipdeo .order-edit .courier-features .Polaris-RadioButton__Input:active+.Polaris-RadioButton__Backdrop {
+  border-color: #7AC2FF !important;
+  box-shadow  : 0 0 0 1px #7AC2FF, 0 0 0 0 transparent !important;
+}
+
+.shipdeo .order-edit .courier-features .Polaris-RadioButton__Input:checked~.Polaris-RadioButton__Icon {
+  transform       : translate(-50%, -50%) scale(1.1);
+  background-color: #45A9FF !important;
+}
+
+.shipdeo .order-edit .courier-features .Polaris-Choice__Label {
+  width: 100%;
+}
+
+.shipdeo .order-edit .courier-feature-label {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.shipdeo .order-edit .courier-feature-label label {
+  font-weight: normal;
+  font-size  : 16px;
+  color      : #414B54;
+}
+
+.shipdeo .order-edit .courier-feature-price {
+  display       : flex;
+  flex-direction: column;
+}
+
+.shipdeo .order-edit .courier-feature-price label {
+  font-weight: normal;
+  font-size  : 13px;
+  color      : #414B54;
+}
+
+.shipdeo .order-edit .courier-feature-price small {
+  font-weight: normal;
+  font-size  : 12px;
+  color      : #8896A2;
+}
+
+#table-heading {
+  padding: 1.2rem 2rem;
+  padding-left: calc(2rem + 42px);
+}

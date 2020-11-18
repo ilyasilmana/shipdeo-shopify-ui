@@ -1,0 +1,26 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100px * var(--global-scale));
+  background: var(--shipdeo-color-2);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.topBarLogoWrapper {
+  height: 100%;
+  padding: calc(30px * var(--global-scale)) calc(64px * var(--global-scale));
+}
+
+.topBarLogo {
+  height: 100%;
+}
+
+.topBarBack {
+  color: var(--shipdeo-color-1);
+  font-weight: 500;
+  font-size: calc(20px * var(--global-scale));
+  line-height: 23px;
+  text-align: center;
+  margin-right: calc(64px * var(--global-scale))
+}

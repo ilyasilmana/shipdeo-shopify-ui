@@ -1,0 +1,22 @@
+.navbar {
+  display        : flex;
+  justify-content: center;
+  max-width      : 991px;
+  margin-left    : auto;
+  margin-right   : auto;
+}
+
+.navbarItem {
+  width         : 200px;
+  padding-top   : calc(64px * var(--global-scale));
+  padding-bottom: calc(24px * var(--global-scale));
+  border-bottom : 1px solid #DDDDDD;
+  font-size     : calc(20px * var(--global-scale));
+  line-height   : 23px;
+  text-align    : center;
+}
+
+.navbarItemActive {
+  border-bottom: 2px solid #003A52;
+  font-weight: 500;
+}

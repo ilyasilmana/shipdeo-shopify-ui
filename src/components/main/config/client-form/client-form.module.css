@@ -1,0 +1,15 @@
+.configCard {
+  width: 100%;
+  max-width : 480px;
+  margin    : auto;
+  margin-top: calc(64px * var(--global-scale));
+}
+
+.configCard [class~=Polaris-FormLayout__Item] {
+  margin-top: 2rem;
+}
+
+.configCard [class~=Polaris-Label__Text] {
+  font-size  : 14px;
+  line-height: 20px;
+}

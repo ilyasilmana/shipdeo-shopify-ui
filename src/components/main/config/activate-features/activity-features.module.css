@@ -1,0 +1,33 @@
+.configCard {
+  max-width : 480px;
+  margin    : auto;
+  margin-top: calc(64px * var(--global-scale));
+}
+
+.configCard [class~=Polaris-FormLayout__Item] {
+  margin-top: 2rem;
+}
+
+.configCard [class~=Polaris-Label__Text] {
+  font-size  : 14px;
+  line-height: 20px;
+}
+
+.choiceListWrapper {
+  padding: 16px;
+}
+
+.choiceLabelWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.choiceLabelImg {
+  margin-right: 15px;
+}
+
+.choiceLabelText {
+  font-size: calc(20px * var(--global-scale));
+  line-height: 29px;
+  color: var(--shipdeo-color-2);
+}
